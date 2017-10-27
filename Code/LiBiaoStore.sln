@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiBiaoStore", "LiBiaoStore\LiBiaoStore.csproj", "{F1039B19-47AD-4861-A97D-1E68D5B244D8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B92A6C67-81FD-4BBC-B787-AD4C6C5D407A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{953D885E-58FA-4B2C-9E9F-EB92450EB094}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{9C2DE0CD-D199-4FC0-A1D2-33F51447C85B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiBiaoStore.Web", "LiBiaoStore.Web\LiBiaoStore.Web.csproj", "{F1039B19-47AD-4861-A97D-1E68D5B244D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiBiaoStore.Data", "LiBiaoStore.Data\LiBiaoStore.Data.csproj", "{AB4E6486-E07C-49A8-A5DD-B81936960F74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +23,16 @@ Global
 		{F1039B19-47AD-4861-A97D-1E68D5B244D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1039B19-47AD-4861-A97D-1E68D5B244D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1039B19-47AD-4861-A97D-1E68D5B244D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB4E6486-E07C-49A8-A5DD-B81936960F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB4E6486-E07C-49A8-A5DD-B81936960F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB4E6486-E07C-49A8-A5DD-B81936960F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB4E6486-E07C-49A8-A5DD-B81936960F74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1039B19-47AD-4861-A97D-1E68D5B244D8} = {B92A6C67-81FD-4BBC-B787-AD4C6C5D407A}
+		{AB4E6486-E07C-49A8-A5DD-B81936960F74} = {9C2DE0CD-D199-4FC0-A1D2-33F51447C85B}
 	EndGlobalSection
 EndGlobal
