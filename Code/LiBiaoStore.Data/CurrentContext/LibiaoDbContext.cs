@@ -1,18 +1,18 @@
-﻿using System;
+﻿using LiBiaoStore.Domain.Entity;
+using MySql.Data.Entity;
+using System;
 using System.Data.Entity;
 using System.Linq;
 using System.Reflection;
 
 namespace LiBiaoStore.Data.CurrentContext
 {
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
     public class LibiaoDbContext : DbContext
     {
-        public LibiaoDbContext() 
+        public LibiaoDbContext() : this("LibiaoStoreContext")
         {
-            this.Configuration.AutoDetectChangesEnabled = false;
-            this.Configuration.ValidateOnSaveEnabled = false;
-            this.Configuration.LazyLoadingEnabled = true;
-            this.Configuration.ProxyCreationEnabled = false;
+
         }
 
         public LibiaoDbContext(string sqlConntionStr) : base(sqlConntionStr)
@@ -30,8 +30,8 @@ namespace LiBiaoStore.Data.CurrentContext
 
         #region  IDbSet<Entity>
 
-        //public IDbSet<Sys_Area> Sys_Area { set; get; }
-        //public IDbSet<Sys_DbBackup> Sys_DbBackup { set; get; }
+        public IDbSet<T_Wechat_Admin> T_Wechat_Admin { set; get; }
+        public IDbSet<T_Wechat_RequestLog> T_Wechat_RequestLog { set; get; }
         //public IDbSet<Sys_FilterIP> Sys_FilterIP { set; get; }
         //public IDbSet<Sys_Items> Sys_Items { set; get; }
         //public IDbSet<Sys_ItemsDetail> Sys_ItemsDetail { set; get; }

@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB4E6486-E07C-49A8-A5DD-B81936960F74}</ProjectGuid>
+    <ProjectGuid>{6A9F9003-A7DE-413E-8357-287059B0E0D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LiBiaoStore.Data</RootNamespace>
-    <AssemblyName>LiBiaoStore.Data</AssemblyName>
+    <RootNamespace>LiBiaoStore.Application</RootNamespace>
+    <AssemblyName>LiBiaoStore.Application</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -39,14 +39,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MySql.Data.6.9.10\lib\net45\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\MySql.Data.Entity.6.9.10\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,31 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CurrentContext\LibiaoDbContext.cs" />
-    <Compile Include="Extensions\DbContextRepository.cs" />
-    <Compile Include="Extensions\EntityInterfaceExtensions.cs" />
-    <Compile Include="Extensions\IDbContextRepository.cs" />
+    <Compile Include="Application\WechatRequestLogApp.cs" />
+    <Compile Include="Application\WechatAdminApp.cs" />
+    <Compile Include="IApplication\IWechatAdminApp.cs" />
+    <Compile Include="IApplication\IWechatRequestLogApp.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\LiBiaoStore.Code\LiBiaoStore.Code.csproj">
-      <Project>{b940672b-e663-4041-805b-209eb70e13b7}</Project>
+      <Project>{B940672B-E663-4041-805B-209EB70E13B7}</Project>
       <Name>LiBiaoStore.Code</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LiBiaoStore.Data\LiBiaoStore.Data.csproj">
+      <Project>{ab4e6486-e07c-49a8-a5dd-b81936960f74}</Project>
+      <Name>LiBiaoStore.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\LiBiaoStore.Domain\LiBiaoStore.Domain.csproj">
       <Project>{9e66a682-5c84-4e47-9ac3-d25d4fc62e71}</Project>
       <Name>LiBiaoStore.Domain</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
+    <ProjectReference Include="..\LiBiaoStore.Repository\LiBiaoStore.Repository.csproj">
+      <Project>{ce081c81-97f7-4437-ba0e-184867058e21}</Project>
+      <Name>LiBiaoStore.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

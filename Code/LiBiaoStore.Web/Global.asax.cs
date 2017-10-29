@@ -14,6 +14,7 @@ namespace LiBiaoStore.Web
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            AutoFacConfig.Register();
         }
     }
 }

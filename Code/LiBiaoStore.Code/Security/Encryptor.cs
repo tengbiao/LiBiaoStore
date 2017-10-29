@@ -5,7 +5,8 @@ using System.Security.Cryptography;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.Security;
 
-namespace TSMember.Common
+
+namespace LiBiaoStore.Code
 {
     /// <summary>
     /// MD5加密

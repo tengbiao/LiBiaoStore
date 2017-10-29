@@ -1,7 +1,45 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Libiao小店</title><!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="libiao" />
+    <script type="application/x-javascript">
+         addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- Meta tag Keywords -->
+    <!-- css files -->
+    <link href="~/Content/wait/css/style.css" rel="stylesheet" />
+    <link href="~/Content/wait/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/wait/css/jquery.countdown.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="agile-main">
+        <div class="agile-head">
+            <h1>网站正在赶路中</h1>
+            <p>我们正在努力的加油中，希望我们能早日相见。(●'◡'●)</p>
+        </div>
+        <div class="agile-icon">
+            <span><i class="fa fa-hand-o-down" aria-hidden="true"></i></span>
+        </div>
+        <!--timer-->
+        <div class="timer_wrap">
+            <div id="counter"> </div>
+        </div>
+        <!--//timer-->
+        <div class="agile-copyright">
+            <footer>&copy; 2017 Libiao.stroe</footer>
+        </div>
 
-<h2>Index</h2>
-
+    </section>
+    <script src="~/Scripts/Lib/jquery.min.js"></script>
+    <script src="~/Scripts/Lib/jquery.countdown.js"></script>
+    <script src="~/Content/wait/js/script.js"></script>
+</body>
+</html>
