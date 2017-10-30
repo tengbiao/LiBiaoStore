@@ -5,6 +5,8 @@ using System.Web.Mvc;
 using System.Linq;
 using LiBiaoStore.Repository.Repository;
 using LiBiaoStore.Repository.IRepository;
+using System.Web.Compilation;
+using System.Reflection;
 
 namespace LiBiaoStore.Web.App_Start
 {
@@ -26,10 +28,14 @@ namespace LiBiaoStore.Web.App_Start
             ContainerBuilder builder = new ContainerBuilder();
             //注册仓储基类
             builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
+
+            var assemblys = BuildManager.GetReferencedAssemblies().Cast<Assembly>().ToList();
+
             //注册控制器
-            builder.RegisterControllers(typeof(AutoFacConfig).Assembly);
+            builder.RegisterControllers(assemblys.ToArray());
+            
             //注册所有的 AppService 和 Repository
-            foreach (var item in AppDomain.CurrentDomain.GetAssemblies())
+            foreach (var item in assemblys)
             {
                 string name = item.GetName().Name;
                 if (new string[] { "LiBiaoStore.Application", "LiBiaoStore.Repository" }.Count(a => a == name) > 0)
