@@ -103,14 +103,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\wait\css\font-awesome.css" />
-    <Content Include="Content\wait\css\jquery.countdown.css" />
-    <Content Include="Content\wait\css\style.css" />
-    <Content Include="Content\wait\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\wait\images\3.jpg" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\wechat-public.jpg" />
+    <Content Include="Content\Images\wechat.jpg" />
+    <Content Include="Content\WebSite\jquery.countdown.css" />
+    <Content Include="Content\WebSite\style.css" />
+    <Content Include="Content\Images\3.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\Lib\jquery.countdown.js" />
-    <Content Include="Scripts\Lib\jquery.min.js" />
-    <Content Include="Content\wait\js\script.js" />
+    <Content Include="Scripts\WebSite\script.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -135,14 +152,8 @@
     <Content Include="Configs\connectionStrings.config" />
     <Content Include="Configs\log4net.config" />
     <Content Include="Configs\appSettings.config" />
-    <Content Include="Content\wait\fonts\fontawesome-webfont.eot" />
-    <Content Include="Content\wait\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Content\wait\fonts\fontawesome-webfont.woff" />
-    <Content Include="Content\wait\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Content\wait\fonts\FontAwesome.otf" />
-    <Content Include="Content\wait\fonts\Lato-Regular.ttf" />
-    <Content Include="Content\wait\fonts\Raleway-Regular.ttf" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -187,7 +198,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58173</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:8066</IISUrl>
+          <IISUrl>http://localhost:8060/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:8060/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
